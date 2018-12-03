@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="3.0.0b11">
+<PsychoPy2experiment encoding="utf-8" version="3.0.0b8">
   <Settings>
     <Param name="Completed URL" updates="None" val="completedURL" valType="str"/>
     <Param name="Completion URL" updates="None" val="completionURL" valType="str"/>
@@ -369,8 +369,8 @@
     <Routine name="instr"/>
     <LoopInitiator loopType="TrialHandler" name="trials">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('trialNum', 1), ('trial1', 'The cat liked the milk. '), ('trial2', 'The dog liked the soup. '), ('question', 'Did the dog like the milk? ')]), OrderedDict([('trialNum', 2), ('trial1', 'The child liked the cheese.'), ('trial2', 'The ocelot liked the ham. '), ('question', 'Did the orangutan like the cheese? ')]), OrderedDict([('trialNum', 3), ('trial1', 'The elephant liked the peanuts. '), ('trial2', 'The megalodon liked the fish. '), ('question', 'Did the elephant like the fish? ')]), OrderedDict([('trialNum', 4), ('trial1', 'The komodo dragon liked the meat. '), ('trial2', 'The mouse liked the lab room. '), ('question', 'Did the mouse like the lab room? ')]), OrderedDict([('trialNum', 5), ('trial1', 'The blue whale liked the algae. '), ('trial2', 'The echidna liked the bugs. '), ('question', 'Did the blue whale like the algae? ')])]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="stims.xlsx" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('trialNum', 1), ('trial1', 'The cat liked the milk. '), ('trial2', 'The dog liked the soup. '), ('question', 'Did the dog like the milk? '), ('corrAns', 'j')]), OrderedDict([('trialNum', 2), ('trial1', 'The child liked the cheese.'), ('trial2', 'The ocelot liked the ham. '), ('question', 'Did the orangutan like the cheese? '), ('corrAns', 'j')]), OrderedDict([('trialNum', 3), ('trial1', 'The elephant liked the peanuts. '), ('trial2', 'The megalodon liked the fish. '), ('question', 'Did the elephant like the fish? '), ('corrAns', 'j')]), OrderedDict([('trialNum', 4), ('trial1', 'The komodo dragon liked the meat. '), ('trial2', 'The mouse liked the lab room. '), ('question', 'Did the mouse like the lab room? '), ('corrAns', 'f')]), OrderedDict([('trialNum', 5), ('trial1', 'The blue whale liked the algae. '), ('trial2', 'The echidna liked the bugs. '), ('question', 'Did the blue whale like the algae? '), ('corrAns', 'f')])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="stims_original.xlsx" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="sequential" valType="str"/>
