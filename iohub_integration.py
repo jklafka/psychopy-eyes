@@ -14,7 +14,7 @@ from __future__ import absolute_import, division
 from psychopy import locale_setup, sound, gui, visual, core, data, event, logging, clock
 from psychopy.constants import (NOT_STARTED, STARTED, PLAYING, PAUSED,
                                 STOPPED, FINISHED, PRESSED, RELEASED, FOREVER)
-from psychopy.iohub import launchHubServer
+from psychopy.iohub import util, client
 import numpy as np  # whole numpy lib is available, prepend 'np.'
 from numpy import (sin, cos, tan, log, log10, pi, average,
                    sqrt, std, deg2rad, rad2deg, linspace, asarray)
@@ -27,6 +27,8 @@ _thisDir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_thisDir)
 
 # Store info about the experiment session
+expName = 'iohub_integration'  # from the Builder filename that created this script
+expInfo = {'participant': '', 'session': '001'}
 dlg = gui.DlgFromDict(dictionary=expInfo, title=expName)
 if dlg.OK == False:
     core.quit()  # user pressed cancel
@@ -39,7 +41,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\jklaf\\Documents\\GitHub\\psychopy-eyes\\11-13_test_lastrun.py',
+    originPath='C:\\11-13_test_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -49,15 +51,41 @@ logging.console.setLevel(logging.WARNING)  # this outputs to the screen, not a f
 endExpNow = False  # flag for 'escape' or other condition => quit the exp
 
 # Start Code - component code to be run before the window creation
-io = launchHubServer()
-eyetracker = io.devices.eyetracker
-eyetracker.setRecordingState(True)
+#io_config=load(file('SMI_iview.yaml','r'), Loader=Loader)
+#io = launchHubServer()
+#eyetracker = io.devices.eyetracker
+#eyetracker.setRecordingState(True)
+from psychopy.iohub.client import ioHubConnection
+
+io_config=util.readConfig('SMI_iview.yaml')
+
+io=launchHubServer(io_config)
+
+#iokeyboard=io.devices.keyboard
+#mouse=io.devices.mouse
+
+if io.getDevice('tracker'):
+    eyetracker=io.getDevice('tracker')
+    win.fullscr=False
+    win.winHandle.set_fullscreen(False)
+    win.winHandle.minimize()
+    win.flip()
+
+    eyetracker.runSetupProcedure(starting_state = EyeTrackerConstants.TRACKER_FEEDBACK_STATE)
+    eyetracker.runSetupProcedure(starting_state = EyeTrackerConstants.CALIBRATION_STATE)
+    eyetracker.runSetupProcedure(starting_state = EyeTrackerConstants.VALIDATION_STATE)
+
+    win.winHandle.maximize()
+    win.winHandle.activate()
+    win.fullscr=True
+    win.winHandle.set_fullscreen(True)
+    win.flip()
 
 # Setup the Window
 win = visual.Window(
-    size=(1024, 768), fullscr=True, screen=0,
+    size=(1920, 1080), fullscr=True, screen=1,
     allowGUI=False, allowStencil=False,
-    monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
+    monitor='DellMonitor', color='black', colorSpace='rgb',
     blendMode='avg', useFBO=True)
 # store frame rate of monitor if we can measure it
 expInfo['frameRate'] = win.getActualFrameRate()

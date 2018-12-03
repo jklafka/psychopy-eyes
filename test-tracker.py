@@ -26,7 +26,7 @@ _thisDir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_thisDir)
 
 # Store info about the experiment session
-expName = '11-13_test'  # from the Builder filename that created this script
+expName = 'test-tracker'  # from the Builder filename that created this script
 expInfo = {'participant': '', 'session': '001'}
 dlg = gui.DlgFromDict(dictionary=expInfo, title=expName)
 if dlg.OK == False:
@@ -34,13 +34,18 @@ if dlg.OK == False:
 expInfo['date'] = data.getDateStr()  # add a simple timestamp
 expInfo['expName'] = expName
 
+from psychopy.iohub.client import launchHubServer
+#io = launchHubServer(iohub_config_name = "mouse.yaml", experiment_code = "test")
+io = launchHubServer(iohub_config_name = "mouse.yaml")
+tracker = io.devices.tracker
+
 # Data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
 filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])
 
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\jklaf\\Documents\\GitHub\\psychopy-eyes\\11-13_test_lastrun.py',
+    originPath=None,
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -53,22 +58,25 @@ endExpNow = False  # flag for 'escape' or other condition => quit the exp
 
 # Setup the Window
 win = visual.Window(
-    size=(1024, 768), fullscr=True, screen=0,
-    allowGUI=False, allowStencil=False,
-    monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
-    blendMode='avg', useFBO=True)
+   size=(1920, 1080), fullscr=True, screen=0,
+   allowGUI=False, allowStencil=False,
+   monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
+   blendMode='avg', useFBO=True)
 # store frame rate of monitor if we can measure it
 expInfo['frameRate'] = win.getActualFrameRate()
 if expInfo['frameRate'] != None:
     frameDur = 1.0 / round(expInfo['frameRate'])
 else:
     frameDur = 1.0 / 60.0  # could not measure, so guess
+    
+gaze_dot = visual.GratingStim(win, tex=None, mask='gauss', pos=(0, 0),
+                              size=(66, 66), color='green', units='pix')
 
 # Initialize components for Routine "instr"
 instrClock = core.Clock()
 instructions = visual.TextStim(win=win, name='instructions',
     text='INSTRUCTIONS:\n\nA sentence will appear at the center of the screen. \n\nAfter you have read the sentence on the screen, please press the space button. \n\nPlease focus on the cross that will then appear at the center of the screen. \n\nAfter a red box appears around the cross, hit the space bar to go on to the next sentence. \n\nYou should read as quickly as possible while still understanding the sentence. Please read these sentences for comprehension, as you will be asked questions on their content.\n\nPlease press the "f" key for yes or the "j" key for no on the comprehension questions. You will be scored on your number correct. ',
-    font='Arial',
+    font='Courier',
     pos=(0, .25), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
@@ -78,7 +86,7 @@ instructions = visual.TextStim(win=win, name='instructions',
 trial1Clock = core.Clock()
 stims = visual.TextStim(win=win, name='stims',
     text='default text',
-    font='Arial',
+    font='Courier',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
@@ -105,7 +113,7 @@ in_stim1 = visual.ShapeStim(
 trial2Clock = core.Clock()
 text = visual.TextStim(win=win, name='text',
     text='default text',
-    font='Arial',
+    font='Courier',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
@@ -132,7 +140,7 @@ in_stim2 = visual.ShapeStim(
 questionClock = core.Clock()
 text_2 = visual.TextStim(win=win, name='text_2',
     text='default text',
-    font='Arial',
+    font='Courier',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
@@ -159,7 +167,7 @@ in_stim3 = visual.ShapeStim(
 end_instrClock = core.Clock()
 text_3 = visual.TextStim(win=win, name='text_3',
     text='You are done with the experiment! Please stand up and let the experimenter know. ',
-    font='Arial',
+    font='Courier',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
@@ -262,6 +270,8 @@ for thisTrial in trials:
     trial1Clock.reset()  # clock
     frameN = -1
     continueRoutine = True
+    io.clearEvents('all')
+    tracker.setRecordingState(True)
     # update component parameters for each repeat
     stims.setText(trial1)
     key_resp_2 = event.BuilderKeyResponse()
@@ -272,12 +282,22 @@ for thisTrial in trials:
             thisComponent.status = NOT_STARTED
     
     # -------Start Routine "trial1"-------
+
     while continueRoutine:
         # get current time
         t = trial1Clock.getTime()
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
-        
+        gpos = tracker.getLastGazePosition()
+
+        # Update stim based on gaze position
+        valid_gaze_pos = isinstance(gpos, (tuple, list))
+        if valid_gaze_pos:
+            # If we have a gaze position from the tracker, update gc stim
+            # and text stim.
+            gaze_dot.setPos(gpos)
+            gaze_dot.draw()
+
         # *stims* updates
         if t >= 0.0 and stims.status == NOT_STARTED:
             # keep track of start time/frame for later
@@ -329,11 +349,11 @@ for thisTrial in trials:
         # refresh the screen
         if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
             win.flip()
-    
     # -------Ending Routine "trial1"-------
     for thisComponent in trial1Components:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
+    tracker.setRecordingState(False)
     # the Routine "trial1" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -394,6 +414,8 @@ for thisTrial in trials:
     trial2Clock.reset()  # clock
     frameN = -1
     continueRoutine = True
+    io.clearEvents('all')
+    tracker.setRecordingState(True)
     # update component parameters for each repeat
     text.setText(trial2)
     key_resp_4 = event.BuilderKeyResponse()
@@ -409,6 +431,15 @@ for thisTrial in trials:
         t = trial2Clock.getTime()
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
+        gpos = tracker.getLastGazePosition()
+
+        # Update stim based on gaze position
+        valid_gaze_pos = isinstance(gpos, (tuple, list))
+        if valid_gaze_pos:
+            # If we have a gaze position from the tracker, update gc stim
+            # and text stim.
+            gaze_dot.setPos(gpos)
+            gaze_dot.draw()
         
         # *text* updates
         if t >= 0 and text.status == NOT_STARTED:
@@ -467,6 +498,7 @@ for thisTrial in trials:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # the Routine "trial2" was not non-slip safe, so reset the non-slip timer
+    tracker.setRecordingState(False)
     routineTimer.reset()
     
     # ------Prepare to start Routine "interval_stim_trial2"-------
@@ -526,6 +558,8 @@ for thisTrial in trials:
     questionClock.reset()  # clock
     frameN = -1
     continueRoutine = True
+    io.clearEvents('all')
+    tracker.setRecordingState(True)
     # update component parameters for each repeat
     text_2.setText(question)
     key_resp_5 = event.BuilderKeyResponse()
@@ -541,6 +575,15 @@ for thisTrial in trials:
         t = questionClock.getTime()
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
+        gpos = tracker.getLastGazePosition()
+
+        # Update stim based on gaze position
+        valid_gaze_pos = isinstance(gpos, (tuple, list))
+        if valid_gaze_pos:
+            # If we have a gaze position from the tracker, update gc stim
+            # and text stim.
+            gaze_dot.setPos(gpos)
+            gaze_dot.draw()
         
         # *text_2* updates
         if t >= 0.0 and text_2.status == NOT_STARTED:
@@ -605,6 +648,7 @@ for thisTrial in trials:
     for thisComponent in questionComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
+    tracker.setRecordingState(False)
     # check responses
     if key_resp_5.keys in ['', [], None]:  # No response was made
         key_resp_5.keys=None
@@ -613,6 +657,9 @@ for thisTrial in trials:
            key_resp_5.corr = 1;  # correct non-response
         else:
            key_resp_5.corr = 0;  # failed to respond (incorrectly)
+    print(text_2.pos)
+    print(text_2.boundingBox)
+    print(len(text_2.text))
     # store data for trials (TrialHandler)
     trials.addData('key_resp_5.keys',key_resp_5.keys)
     trials.addData('key_resp_5.corr', key_resp_5.corr)
@@ -749,6 +796,7 @@ thisExp.saveAsWideText(filename+'.csv')
 thisExp.saveAsPickle(filename)
 logging.flush()
 # make sure everything is closed down
+io.quit()
 thisExp.abort()  # or data files will save again on exit
 win.close()
 core.quit()
