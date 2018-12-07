@@ -1,0 +1,3 @@
+trialNum,trial1,trial2,question,corrAns,trials.thisRepN,trials.thisTrialN,trials.thisN,trials.thisIndex,key_resp_5.keys,key_resp_5.corr,key_resp_5.rt,participant,session,date,expName,frameRate,
+1,The cat liked the milk. ,The dog liked the soup. ,Did the dog like the milk? ,j,0,0,0,0,j,1,1.3197424239770044,test,001,2018_Dec_03_1544,11-13_test,60.00735629774538,
+2,The child liked the cheese.,The ocelot liked the ham. ,Did the orangutan like the cheese? ,j,0,1,1,1,f,0,1.3194807919790037,test,001,2018_Dec_03_1544,11-13_test,60.00735629774538,
