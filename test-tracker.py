@@ -33,6 +33,7 @@ if dlg.OK == False:
     core.quit()  # user pressed cancel
 expInfo['date'] = data.getDateStr()  # add a simple timestamp
 expInfo['expName'] = expName
+full_data_arr = np.zeros((1, 5))
 
 from psychopy.iohub.client import launchHubServer
 #io = launchHubServer(iohub_config_name = "mouse.yaml", experiment_code = "test")
@@ -272,6 +273,10 @@ for thisTrial in trials:
     continueRoutine = True
     io.clearEvents('all')
     tracker.setRecordingState(True)
+    
+    data_arr = np.zeros((1000, 5))
+    da_counter = 0
+    
     # update component parameters for each repeat
     stims.setText(trial1)
     key_resp_2 = event.BuilderKeyResponse()
@@ -295,8 +300,13 @@ for thisTrial in trials:
         if valid_gaze_pos:
             # If we have a gaze position from the tracker, update gc stim
             # and text stim.
+            data_arr[da_counter] = [expInfo['participant'], t, 1, gpos[0], gpos[1]]
             gaze_dot.setPos(gpos)
             gaze_dot.draw()
+        else:
+            data_arr[da_counter] = [expInfo['participant'], t, 0, None, None]
+            
+        da_counter += 1
 
         # *stims* updates
         if t >= 0.0 and stims.status == NOT_STARTED:
@@ -354,6 +364,8 @@ for thisTrial in trials:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     tracker.setRecordingState(False)
+    full_data_arr = np.concatenate((full_data_arr, data_arr), axis=0)
+    np.savetxt("results.csv", full_data_arr, delimiter=",")
     # the Routine "trial1" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
