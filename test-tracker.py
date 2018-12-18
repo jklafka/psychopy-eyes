@@ -37,7 +37,7 @@ full_data_arr = np.zeros((1, 5))
 
 from psychopy.iohub.client import launchHubServer
 #io = launchHubServer(iohub_config_name = "mouse.yaml", experiment_code = "test")
-io = launchHubServer(iohub_config_name = "mouse.yaml")
+io = launchHubServer(iohub_config_name = "callab.yaml")
 tracker = io.devices.tracker
 
 # Data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
@@ -77,7 +77,7 @@ gaze_dot = visual.GratingStim(win, tex=None, mask='gauss', pos=(0, 0),
 instrClock = core.Clock()
 instructions = visual.TextStim(win=win, name='instructions',
     text='INSTRUCTIONS:\n\nA sentence will appear at the center of the screen. \n\nAfter you have read the sentence on the screen, please press the space button. \n\nPlease focus on the cross that will then appear at the center of the screen. \n\nAfter a red box appears around the cross, hit the space bar to go on to the next sentence. \n\nYou should read as quickly as possible while still understanding the sentence. Please read these sentences for comprehension, as you will be asked questions on their content.\n\nPlease press the "f" key for yes or the "j" key for no on the comprehension questions. You will be scored on your number correct. ',
-    font='Courier',
+    font='Songti SC',
     pos=(0, .25), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
@@ -87,7 +87,7 @@ instructions = visual.TextStim(win=win, name='instructions',
 trial1Clock = core.Clock()
 stims = visual.TextStim(win=win, name='stims',
     text='default text',
-    font='Courier',
+    font='Songti SC',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
@@ -114,7 +114,7 @@ in_stim1 = visual.ShapeStim(
 trial2Clock = core.Clock()
 text = visual.TextStim(win=win, name='text',
     text='default text',
-    font='Courier',
+    font='Songti SC',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
@@ -141,7 +141,7 @@ in_stim2 = visual.ShapeStim(
 questionClock = core.Clock()
 text_2 = visual.TextStim(win=win, name='text_2',
     text='default text',
-    font='Courier',
+    font='Songti SC',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
@@ -168,7 +168,7 @@ in_stim3 = visual.ShapeStim(
 end_instrClock = core.Clock()
 text_3 = visual.TextStim(win=win, name='text_3',
     text='You are done with the experiment! Please stand up and let the experimenter know. ',
-    font='Courier',
+    font='Songti SC',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
@@ -248,10 +248,23 @@ for thisComponent in instrComponents:
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
-trials = data.TrialHandler(nReps=1, method='sequential', 
-    extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('stims.xlsx'),
-    seed=None, name='trials')
+import csv
+
+from collections import OrderedDict
+
+stims_list = []
+
+with open("stims2.csv", encoding = "utf-8") as csvfile:
+   reader = csv.reader(csvfile)
+   keys = next(reader)
+   for row in reader:
+       stims_list.append(OrderedDict(zip(keys,row)))
+
+# set up handler to look after randomisation of conditions etc
+trials = data.TrialHandler(nReps=1, method='random',
+   extraInfo=expInfo, originPath=-1,
+   trialList=stims_list,
+   seed=None, name='trials')
 thisExp.addLoop(trials)  # add the loop to the experiment
 thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
 # abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
@@ -622,10 +635,10 @@ for thisTrial in trials:
                 key_resp_5.keys = theseKeys[-1]  # just the last key pressed
                 key_resp_5.rt = key_resp_5.clock.getTime()
                 # was this 'correct'?
-                if (key_resp_5.keys == str(corrAns)) or (key_resp_5.keys == corrAns):
-                    key_resp_5.corr = 1
-                else:
-                    key_resp_5.corr = 0
+                #if (key_resp_5.keys == str(corrAns)) or (key_resp_5.keys == corrAns):
+                #    key_resp_5.corr = 1
+                #else:
+                #    key_resp_5.corr = 0
                 # a response ends the routine
                 continueRoutine = False
         
@@ -665,16 +678,16 @@ for thisTrial in trials:
     if key_resp_5.keys in ['', [], None]:  # No response was made
         key_resp_5.keys=None
         # was no response the correct answer?!
-        if str(corrAns).lower() == 'none':
-           key_resp_5.corr = 1;  # correct non-response
-        else:
-           key_resp_5.corr = 0;  # failed to respond (incorrectly)
+        #if str(corrAns).lower() == 'none':
+        #   key_resp_5.corr = 1;  # correct non-response
+        #else:
+        #   key_resp_5.corr = 0;  # failed to respond (incorrectly)
     print(text_2.pos)
     print(text_2.boundingBox)
     print(len(text_2.text))
     # store data for trials (TrialHandler)
     trials.addData('key_resp_5.keys',key_resp_5.keys)
-    trials.addData('key_resp_5.corr', key_resp_5.corr)
+    #trials.addData('key_resp_5.corr', key_resp_5.corr)
     if key_resp_5.keys != None:  # we had a response
         trials.addData('key_resp_5.rt', key_resp_5.rt)
     # the Routine "question" was not non-slip safe, so reset the non-slip timer
