@@ -21,6 +21,8 @@ from numpy.random import random, randint, normal, shuffle
 import os  # handy system and path functions
 import sys  # to get file system encoding
 
+from psychopy.tools.monitorunittools import posToPix
+
 # Ensure that relative paths start from the same directory as this script
 _thisDir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_thisDir)
@@ -72,12 +74,22 @@ else:
     
 gaze_dot = visual.GratingStim(win, tex=None, mask='gauss', pos=(0, 0),
                               size=(66, 66), color='green', units='pix')
+                              
+def insideObj(pos, obj, buff):
+
+    buff_pos = ([[buff, -buff], [-buff, -buff], [-buff, buff], [buff, buff]])
+    obj_vertices = obj.verticesPix + buff_pos
+
+    return psychopy.visual.helpers.pointInPolygon(pos[0], pos[1], poly=obj_vertices)                              
+                              
+                              
 
 # Initialize components for Routine "instr"
 instrClock = core.Clock()
 instructions = visual.TextStim(win=win, name='instructions',
     text='INSTRUCTIONS:\n\nA sentence will appear at the center of the screen. \n\nAfter you have read the sentence on the screen, please press the space button. \n\nPlease focus on the cross that will then appear at the center of the screen. \n\nAfter a red box appears around the cross, hit the space bar to go on to the next sentence. \n\nYou should read as quickly as possible while still understanding the sentence. Please read these sentences for comprehension, as you will be asked questions on their content.\n\nPlease press the "f" key for yes or the "j" key for no on the comprehension questions. You will be scored on your number correct. ',
-    font='Songti SC',
+    fontFiles = ["Songti SC Regular.ttf"],
+    font='Songti SC Regular',
     pos=(0, .25), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
@@ -87,15 +99,15 @@ instructions = visual.TextStim(win=win, name='instructions',
 trial1Clock = core.Clock()
 stims = visual.TextStim(win=win, name='stims',
     text='default text',
-    font='Songti SC',
+    font='Songti SC Regular',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
 interval_stim = visual.ShapeStim(
     win=win, name='interval_stim', vertices='cross',
-    size=(0.5, 0.5),
-    ori=0, pos=(0, 0),
+    size=(0.25, 0.25),
+    ori=0, pos=(-1.5, 0),
     lineWidth=0.25, lineColor=[1,1,1], lineColorSpace='rgb',
     fillColor=[1,1,1], fillColorSpace='rgb',
     opacity=1, depth=-2.0, interpolate=True)
@@ -103,18 +115,18 @@ interval_stim = visual.ShapeStim(
 # Initialize components for Routine "interval_stim_trial1"
 interval_stim_trial1Clock = core.Clock()
 in_stim1 = visual.ShapeStim(
-    win=win, name='in_stim1', vertices='cross',
+    win=win, name='interval_stim', vertices='cross',
     size=(0.25, 0.25),
-    ori=0, pos=(0, 0),
+    ori=0, pos=(-0.75, 0),
     lineWidth=0.25, lineColor=[1,1,1], lineColorSpace='rgb',
     fillColor=[1,1,1], fillColorSpace='rgb',
-    opacity=1, depth=0.0, interpolate=True)
+    opacity=1, depth=-2.0, interpolate=True)
 
 # Initialize components for Routine "trial2"
 trial2Clock = core.Clock()
 text = visual.TextStim(win=win, name='text',
     text='default text',
-    font='Songti SC',
+    font='Songti SC Regular',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
@@ -130,18 +142,18 @@ interval_stim2 = visual.ShapeStim(
 # Initialize components for Routine "interval_stim_trial2"
 interval_stim_trial2Clock = core.Clock()
 in_stim2 = visual.ShapeStim(
-    win=win, name='in_stim2', vertices='cross',
+    win=win, name='interval_stim', vertices='cross',
     size=(0.25, 0.25),
-    ori=0, pos=(0, 0),
+    ori=0, pos=(-0.75, 0),
     lineWidth=0.25, lineColor=[1,1,1], lineColorSpace='rgb',
     fillColor=[1,1,1], fillColorSpace='rgb',
-    opacity=1, depth=0.0, interpolate=True)
+    opacity=1, depth=-2.0, interpolate=True)
 
 # Initialize components for Routine "question"
 questionClock = core.Clock()
 text_2 = visual.TextStim(win=win, name='text_2',
     text='default text',
-    font='Songti SC',
+    font='Songti SC Regular',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
@@ -157,18 +169,18 @@ interval_stim3 = visual.ShapeStim(
 # Initialize components for Routine "interval_stim_trial3"
 interval_stim_trial3Clock = core.Clock()
 in_stim3 = visual.ShapeStim(
-    win=win, name='in_stim3', vertices='cross',
+    win=win, name='interval_stim', vertices='cross',
     size=(0.25, 0.25),
-    ori=0, pos=(0, 0),
+    ori=0, pos=(-0.75, 0),
     lineWidth=0.25, lineColor=[1,1,1], lineColorSpace='rgb',
     fillColor=[1,1,1], fillColorSpace='rgb',
-    opacity=1, depth=0.0, interpolate=True)
+    opacity=1, depth=-2.0, interpolate=True)
 
 # Initialize components for Routine "end_instr"
 end_instrClock = core.Clock()
 text_3 = visual.TextStim(win=win, name='text_3',
     text='You are done with the experiment! Please stand up and let the experimenter know. ',
-    font='Songti SC',
+    font='Songti SC Regular',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
@@ -254,7 +266,7 @@ from collections import OrderedDict
 
 stims_list = []
 
-with open("stims2.csv", encoding = "utf-8") as csvfile:
+with open("stims_original.csv", encoding = "utf-8") as csvfile:
    reader = csv.reader(csvfile)
    keys = next(reader)
    for row in reader:
@@ -387,7 +399,12 @@ for thisTrial in trials:
     interval_stim_trial1Clock.reset()  # clock
     frameN = -1
     continueRoutine = True
-    routineTimer.add(1.000000)
+    io.clearEvents('all')
+    tracker.setRecordingState(True)
+    last_time = core.getTime()
+    this_time = last_time
+    look_away_time = 0
+    posPix = posToPix(in_stim1)
     # update component parameters for each repeat
     # keep track of which components have finished
     interval_stim_trial1Components = [in_stim1]
@@ -396,30 +413,44 @@ for thisTrial in trials:
             thisComponent.status = NOT_STARTED
     
     # -------Start Routine "interval_stim_trial1"-------
-    while continueRoutine and routineTimer.getTime() > 0:
+    while continueRoutine:
         # get current time
         t = interval_stim_trial1Clock.getTime()
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
-        
+        gpos=tracker.getPosition()
+        this_time = core.getTime()
+        if type(gpos) in [list,tuple]:
+
+            # check if gaze is on attention getter
+            if (gpos[0] < posPix[0] + 200) and (gpos[0] > posPix[0]-200) \
+                and (gpos[1] < posPix[1] + 200) and (gpos[1] > posPix[1]-200):
+                look_time = look_time + (this_time - last_time)
+        else:
+            look_time = 0
+    
+        last_time = this_time
+    
+        if look_time > 2:
+            continueRoutine = False
         # *in_stim1* updates
         if t >= 0.0 and in_stim1.status == NOT_STARTED:
             # keep track of start time/frame for later
             in_stim1.tStart = t
             in_stim1.frameNStart = frameN  # exact frame index
             in_stim1.setAutoDraw(True)
-        frameRemains = 0.0 + 1- win.monitorFramePeriod * 0.75  # most of one frame period left
-        if in_stim1.status == STARTED and t >= frameRemains:
-            in_stim1.setAutoDraw(False)
-        
-        # check if all components have finished
-        if not continueRoutine:  # a component has requested a forced-end of Routine
-            break
-        continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in interval_stim_trial1Components:
-            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                continueRoutine = True
-                break  # at least one component has not yet finished
+#        frameRemains = 0.0 + 1- win.monitorFramePeriod * 0.75  # most of one frame period left
+#        if in_stim1.status == STARTED and t >= frameRemains:
+#            in_stim1.setAutoDraw(False)
+#        
+#        # check if all components have finished
+#        if not continueRoutine:  # a component has requested a forced-end of Routine
+#            break
+#        continueRoutine = False  # will revert to True if at least one component still running
+#        for thisComponent in interval_stim_trial1Components:
+#            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+#                continueRoutine = True
+#                break  # at least one component has not yet finished
         
         # check for quit (the Esc key)
         if endExpNow or event.getKeys(keyList=["escape"]):
@@ -433,6 +464,7 @@ for thisTrial in trials:
     for thisComponent in interval_stim_trial1Components:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
+    tracker.setRecordingState(False)
     
     # ------Prepare to start Routine "trial2"-------
     t = 0
@@ -635,10 +667,10 @@ for thisTrial in trials:
                 key_resp_5.keys = theseKeys[-1]  # just the last key pressed
                 key_resp_5.rt = key_resp_5.clock.getTime()
                 # was this 'correct'?
-                #if (key_resp_5.keys == str(corrAns)) or (key_resp_5.keys == corrAns):
-                #    key_resp_5.corr = 1
-                #else:
-                #    key_resp_5.corr = 0
+#                if (key_resp_5.keys == str(corrAns)) or (key_resp_5.keys == corrAns):
+#                    key_resp_5.corr = 1
+#                else:
+#                    key_resp_5.corr = 0
                 # a response ends the routine
                 continueRoutine = False
         
@@ -675,13 +707,13 @@ for thisTrial in trials:
             thisComponent.setAutoDraw(False)
     tracker.setRecordingState(False)
     # check responses
-    if key_resp_5.keys in ['', [], None]:  # No response was made
-        key_resp_5.keys=None
-        # was no response the correct answer?!
-        #if str(corrAns).lower() == 'none':
-        #   key_resp_5.corr = 1;  # correct non-response
-        #else:
-        #   key_resp_5.corr = 0;  # failed to respond (incorrectly)
+#    if key_resp_5.keys in ['', [], None]:  # No response was made
+#        key_resp_5.keys=None
+#        # was no response the correct answer?!
+#        if str(corrAns).lower() == 'none':
+#           key_resp_5.corr = 1;  # correct non-response
+#        else:
+#           key_resp_5.corr = 0;  # failed to respond (incorrectly)
     print(text_2.pos)
     print(text_2.boundingBox)
     print(len(text_2.text))

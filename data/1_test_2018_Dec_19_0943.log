@@ -1,0 +1,40 @@
+5.0945 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [1920, 1080]. Using actual size
+5.8706 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([0., 0., 0.]), colorSpace='rgb', fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x156BE610>, gamma=None, kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x16979DB0>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stereo=False, units='norm', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+5.8706 	EXP 	window1: recordFrameIntervals = False
+6.0365 	EXP 	window1: recordFrameIntervals = True
+6.2201 	EXP 	window1: recordFrameIntervals = False
+6.3687 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Songti SC Regular', fontFiles=['Songti SC Regular.ttf'], height=0.1, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Instructions', units='norm', win=Window(...), wrapWidth=1)
+6.3772 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Songti SC Regular', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_2', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+6.3801 	EXP 	text: autoDraw = True
+7.2700 	DATA 	Keypress: space
+7.2707 	EXP 	Created sequence: random, trialTypes=6, nReps=1, seed=None
+7.2710 	EXP 	New trial (rep=0, index=0): OrderedDict([('trialNum', '1'), ('trial1', '狡猾的狐狸跳了下来'), ('trial2', '懒惰的狗在打盹儿'), ('question', '狡猾的狐狸在睡觉吗？')])
+7.2869 	EXP 	text: autoDraw = False
+7.2869 	EXP 	text_2: text = '狡猾的狐狸跳了下来'
+7.2869 	EXP 	text_2: autoDraw = True
+8.0532 	DATA 	Keypress: space
+8.2702 	EXP 	New trial (rep=0, index=1): OrderedDict([('trialNum', '5'), ('trial1', '妈妈在厨房做饭'), ('trial2', '爸爸在书房看书'), ('question', '妈妈在书房吗？')])
+8.2856 	EXP 	text_2: autoDraw = False
+8.2856 	EXP 	text_2: autoDraw = False
+8.2856 	EXP 	text_2: text = '妈妈在厨房做饭'
+8.2856 	EXP 	text_2: autoDraw = True
+8.7367 	DATA 	Keypress: space
+9.2703 	EXP 	New trial (rep=0, index=2): OrderedDict([('trialNum', '3'), ('trial1', '同学家的兔子喜欢到处跑'), ('trial2', '老师家的喵咪很怕水'), ('question', '老师家的喵咪喜欢到处跑吗？')])
+9.2867 	EXP 	text_2: autoDraw = False
+9.2867 	EXP 	text_2: autoDraw = False
+9.2867 	EXP 	text_2: text = '同学家的兔子喜欢到处跑'
+9.2867 	EXP 	text_2: autoDraw = True
+9.5523 	DATA 	Keypress: space
+10.2700 	EXP 	New trial (rep=0, index=3): OrderedDict([('trialNum', '2'), ('trial1', '星期一作业总是特别多'), ('trial2', '每周四有足球训练'), ('question', '周一作业多吗？')])
+10.2899 	EXP 	text_2: autoDraw = False
+10.2899 	EXP 	text_2: autoDraw = False
+10.2899 	EXP 	text_2: text = '星期一作业总是特别多'
+10.2899 	EXP 	text_2: autoDraw = True
+10.6522 	DATA 	Keypress: space
+11.2699 	EXP 	New trial (rep=0, index=4): OrderedDict([('trialNum', '4'), ('trial1', '小明不喜欢吃米饭'), ('trial2', '小华不喜欢吃肉'), ('question', '小明喜欢吃米饭吗？')])
+11.2861 	EXP 	text_2: autoDraw = False
+11.2861 	EXP 	text_2: autoDraw = False
+11.2861 	EXP 	text_2: text = '小明不喜欢吃米饭'
+11.2861 	EXP 	text_2: autoDraw = True
+11.8363 	DATA 	Keypress: escape
+11.8530 	EXP 	window1: mouseVisible = True

@@ -1,0 +1,119 @@
+9.8219 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([0., 0., 0.]), colorSpace='rgb', fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x161C7E10>, gamma=None, kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x1AF5A8B0>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stereo=False, units='norm', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+9.8220 	EXP 	window1: recordFrameIntervals = False
+9.9882 	EXP 	window1: recordFrameIntervals = True
+10.1716 	EXP 	window1: recordFrameIntervals = False
+10.1768 	EXP 	Created unnamed GratingStim = GratingStim(__class__=<class 'psychopy.visual.grating.GratingStim'>, autoDraw=False, autoLog=True, blendmode='avg', color='green', colorSpace='named', contrast=1.0, depth=0, interpolate=False, mask='gauss', maskParams=None, name='unnamed GratingStim', opacity=1.0, ori=0.0, phase=array([0., 0.]), pos=array([0., 0.]), rgbPedestal=array([0., 0., 0.]), sf=array([0.01515152, 0.01515152]), size=array([66., 66.]), tex=None, texRes=128, units='pix', win=Window(...))
+10.3717 	EXP 	Created instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Songti SC Regular', fontFiles=['Songti SC Regular.ttf'], height=0.05, italic=False, languageStyle='LTR', name='instructions', opacity=1.0, ori=0, pos=array([0.  , 0.25]), rgb=array([0., 0., 0.]), text=str(...), units='norm', win=Window(...), wrapWidth=1)
+10.3825 	EXP 	Created stims = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Songti SC Regular', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='stims', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+10.3887 	EXP 	Created interval_stim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=-2.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineWidth=0.25, name='interval_stim', opacity=1.0, ori=array(0.), pos=array([-0.75,  0.  ]), size=array([0.25, 0.25]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+10.3928 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Songti SC Regular', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+10.3942 	EXP 	Created interval_stim2 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=-2.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineWidth=0.25, name='interval_stim2', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.5, 0.5]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+10.3956 	EXP 	Created interval_stim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=-2.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineWidth=0.25, name='interval_stim', opacity=1.0, ori=array(0.), pos=array([-0.75,  0.  ]), size=array([0.25, 0.25]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+10.3992 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Songti SC Regular', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_2', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+10.4007 	EXP 	Created interval_stim3 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=-2.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineWidth=0.25, name='interval_stim3', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.5, 0.5]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+10.4021 	EXP 	Created interval_stim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=-2.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineWidth=0.25, name='interval_stim', opacity=1.0, ori=array(0.), pos=array([-0.75,  0.  ]), size=array([0.25, 0.25]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+10.4195 	EXP 	Created text_3 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Songti SC Regular', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_3', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='norm', win=Window(...), wrapWidth=1)
+10.4229 	EXP 	instructions: autoDraw = True
+11.0548 	DATA 	Keypress: space
+11.0556 	EXP 	Created sequence: random, trialTypes=6, nReps=1, seed=None
+11.0559 	EXP 	New trial (rep=0, index=0): OrderedDict([('trialNum', '3'), ('trial1', '同学家的兔子喜欢到处跑'), ('trial2', '老师家的喵咪很怕水'), ('question', '老师家的喵咪喜欢到处跑吗？')])
+11.1003 	EXP 	window1: mouseVisible = True
+8.8417 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([0., 0., 0.]), colorSpace='rgb', fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x161B7E90>, gamma=None, kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x1AF4A910>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stereo=False, units='norm', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+8.8418 	EXP 	window1: recordFrameIntervals = False
+9.0079 	EXP 	window1: recordFrameIntervals = True
+9.1915 	EXP 	window1: recordFrameIntervals = False
+9.1961 	EXP 	Created unnamed GratingStim = GratingStim(__class__=<class 'psychopy.visual.grating.GratingStim'>, autoDraw=False, autoLog=True, blendmode='avg', color='green', colorSpace='named', contrast=1.0, depth=0, interpolate=False, mask='gauss', maskParams=None, name='unnamed GratingStim', opacity=1.0, ori=0.0, phase=array([0., 0.]), pos=array([0., 0.]), rgbPedestal=array([0., 0., 0.]), sf=array([0.01515152, 0.01515152]), size=array([66., 66.]), tex=None, texRes=128, units='pix', win=Window(...))
+9.3921 	EXP 	Created instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Songti SC Regular', fontFiles=['Songti SC Regular.ttf'], height=0.05, italic=False, languageStyle='LTR', name='instructions', opacity=1.0, ori=0, pos=array([0.  , 0.25]), rgb=array([0., 0., 0.]), text=str(...), units='norm', win=Window(...), wrapWidth=1)
+9.4018 	EXP 	Created stims = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Songti SC Regular', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='stims', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+9.4084 	EXP 	Created interval_stim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=-2.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineWidth=0.25, name='interval_stim', opacity=1.0, ori=array(0.), pos=array([-1.5,  0. ]), size=array([0.25, 0.25]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+9.4095 	EXP 	Created interval_stim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=-2.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineWidth=0.25, name='interval_stim', opacity=1.0, ori=array(0.), pos=array([-0.75,  0.  ]), size=array([0.25, 0.25]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+9.4134 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Songti SC Regular', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+9.4147 	EXP 	Created interval_stim2 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=-2.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineWidth=0.25, name='interval_stim2', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.5, 0.5]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+9.4161 	EXP 	Created interval_stim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=-2.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineWidth=0.25, name='interval_stim', opacity=1.0, ori=array(0.), pos=array([-0.75,  0.  ]), size=array([0.25, 0.25]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+9.4200 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Songti SC Regular', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_2', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+9.4215 	EXP 	Created interval_stim3 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=-2.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineWidth=0.25, name='interval_stim3', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.5, 0.5]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+9.4229 	EXP 	Created interval_stim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=-2.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineWidth=0.25, name='interval_stim', opacity=1.0, ori=array(0.), pos=array([-0.75,  0.  ]), size=array([0.25, 0.25]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+9.4399 	EXP 	Created text_3 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Songti SC Regular', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_3', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='norm', win=Window(...), wrapWidth=1)
+9.4433 	EXP 	instructions: autoDraw = True
+10.1071 	DATA 	Keypress: space
+10.1079 	EXP 	Created sequence: random, trialTypes=6, nReps=1, seed=None
+10.1082 	EXP 	New trial (rep=0, index=0): OrderedDict([('trialNum', '1'), ('trial1', '狡猾的狐狸跳了下来'), ('trial2', '懒惰的狗在打盹儿'), ('question', '狡猾的狐狸在睡觉吗？')])
+10.1380 	EXP 	instructions: autoDraw = False
+10.1380 	EXP 	stims: text = '狡猾的狐狸跳了下来'
+10.1380 	EXP 	unnamed GratingStim: pos = array([-74.57287669, -32.95058213])
+10.1380 	EXP 	stims: autoDraw = True
+10.1380 	EXP 	interval_stim: autoDraw = True
+10.1380 	EXP 	interval_stim: autoDraw = False
+10.1422 	EXP 	unnamed GratingStim: pos = array([-74.57287669, -32.95058213])
+10.1570 	EXP 	unnamed GratingStim: pos = array([-74.57287669, -32.95058213])
+10.1745 	EXP 	unnamed GratingStim: pos = array([-81.78176629, -32.39438036])
+10.1912 	EXP 	unnamed GratingStim: pos = array([-79.21655224, -35.50585698])
+10.2069 	EXP 	unnamed GratingStim: pos = array([-90.51084666, -37.69497668])
+10.2245 	EXP 	unnamed GratingStim: pos = array([-88.03057209, -44.90250908])
+10.2412 	EXP 	unnamed GratingStim: pos = array([-85.43026632, -45.04498729])
+10.2570 	EXP 	unnamed GratingStim: pos = array([-78.28887844, -35.76679853])
+10.2746 	EXP 	unnamed GratingStim: pos = array([-79.79447797, -30.31355733])
+10.2912 	EXP 	unnamed GratingStim: pos = array([-87.68732009, -38.37032946])
+10.3069 	EXP 	unnamed GratingStim: pos = array([-78.63206034, -23.22348544])
+10.3248 	EXP 	unnamed GratingStim: pos = array([-80.33651867, -32.62156698])
+10.3411 	EXP 	unnamed GratingStim: pos = array([-83.5758957 , -30.58114043])
+10.3570 	EXP 	unnamed GratingStim: pos = array([-82.76710474, -27.16265486])
+10.3745 	EXP 	unnamed GratingStim: pos = array([-79.97905076, -23.01638522])
+10.3912 	EXP 	unnamed GratingStim: pos = array([-78.02619405, -43.68490942])
+10.4069 	EXP 	unnamed GratingStim: pos = array([-79.63919164, -29.18830884])
+10.4245 	EXP 	unnamed GratingStim: pos = array([-82.27059293, -41.88833762])
+10.4412 	EXP 	unnamed GratingStim: pos = array([-82.75208043, -25.90761337])
+10.4570 	EXP 	unnamed GratingStim: pos = array([-84.91044443, -27.15617405])
+10.4744 	EXP 	unnamed GratingStim: pos = array([-84.58367168, -31.76510971])
+10.4911 	EXP 	unnamed GratingStim: pos = array([-82.60966587, -26.54519254])
+10.5069 	EXP 	unnamed GratingStim: pos = array([-87.37170988, -34.15955016])
+10.5245 	EXP 	unnamed GratingStim: pos = array([-86.59571026, -27.020399  ])
+10.5412 	EXP 	unnamed GratingStim: pos = array([-1.48646268e-02, -1.94236484e+01])
+10.5571 	EXP 	unnamed GratingStim: pos = array([  0.83219032, -11.43241992])
+10.5744 	EXP 	unnamed GratingStim: pos = array([ -3.19296978, -23.39455717])
+10.5911 	EXP 	unnamed GratingStim: pos = array([ -1.71392135, -16.60046455])
+10.6069 	EXP 	unnamed GratingStim: pos = array([ -2.65857033, -19.78511649])
+10.6245 	EXP 	unnamed GratingStim: pos = array([ -2.27292395, -20.70329766])
+10.6410 	EXP 	unnamed GratingStim: pos = array([ -2.91433886, -17.75682413])
+10.6570 	EXP 	unnamed GratingStim: pos = array([ -4.36226238, -14.98617819])
+10.6744 	EXP 	unnamed GratingStim: pos = array([ -3.74231325, -19.91579954])
+10.6912 	EXP 	unnamed GratingStim: pos = array([-4.88090086, -3.1295014 ])
+10.7069 	EXP 	unnamed GratingStim: pos = array([ -1.98492385, -17.17867956])
+10.7248 	EXP 	unnamed GratingStim: pos = array([ -3.10859028, -14.2496705 ])
+10.7413 	EXP 	unnamed GratingStim: pos = array([-8.09690718, -9.69960793])
+10.7570 	EXP 	unnamed GratingStim: pos = array([ -3.68876813, -29.62584905])
+10.7746 	EXP 	unnamed GratingStim: pos = array([ -4.38332456, -18.13857714])
+10.7912 	EXP 	unnamed GratingStim: pos = array([ -3.34932858, -20.43621986])
+10.8069 	EXP 	unnamed GratingStim: pos = array([  1.47038229, -15.42488871])
+10.8245 	EXP 	unnamed GratingStim: pos = array([ -4.3179461, -18.1378324])
+10.8410 	EXP 	unnamed GratingStim: pos = array([-93.04410194, -19.90316957])
+10.8570 	EXP 	unnamed GratingStim: pos = array([-98.16098243, -23.49235571])
+10.8745 	EXP 	unnamed GratingStim: pos = array([-95.23266785, -22.72610031])
+10.8912 	EXP 	unnamed GratingStim: pos = array([-89.29183694, -28.27195153])
+10.9070 	EXP 	unnamed GratingStim: pos = array([-96.16911322, -26.58766978])
+10.9245 	EXP 	unnamed GratingStim: pos = array([-94.84177148, -34.13783409])
+10.9411 	EXP 	unnamed GratingStim: pos = array([-89.54206306, -28.47223935])
+10.9570 	EXP 	unnamed GratingStim: pos = array([-87.71152672, -30.48825774])
+10.9745 	EXP 	unnamed GratingStim: pos = array([-92.05257519, -34.61836373])
+10.9911 	EXP 	unnamed GratingStim: pos = array([-96.45208222, -20.30184215])
+11.0068 	EXP 	unnamed GratingStim: pos = array([-95.62373183, -31.6157255 ])
+11.0245 	EXP 	unnamed GratingStim: pos = array([-97.55879723, -27.86161085])
+11.0411 	EXP 	unnamed GratingStim: pos = array([-95.59377248, -37.24841398])
+11.0570 	EXP 	unnamed GratingStim: pos = array([-93.72647333, -37.10884245])
+11.0744 	EXP 	unnamed GratingStim: pos = array([-96.71279585, -46.58285151])
+11.0911 	EXP 	unnamed GratingStim: pos = array([-92.98693289, -24.34174415])
+11.1069 	EXP 	unnamed GratingStim: pos = array([-93.69831015, -35.84423338])
+11.1248 	EXP 	unnamed GratingStim: pos = array([-96.66028731, -17.34935673])
+11.1411 	EXP 	unnamed GratingStim: pos = array([-97.21327065, -33.67081961])
+11.1569 	EXP 	unnamed GratingStim: pos = array([-109.21119292,   -9.4506688 ])
+11.1744 	EXP 	unnamed GratingStim: pos = array([-111.61154737,  -27.36063752])
+11.1911 	EXP 	unnamed GratingStim: pos = array([-102.18751987,  -31.00173662])
+11.2067 	EXP 	unnamed GratingStim: pos = array([-111.10313068,  -30.27822085])
+11.2244 	EXP 	unnamed GratingStim: pos = array([-109.11002561,  -27.90902985])
+11.2411 	EXP 	unnamed GratingStim: pos = array([-115.64401897,  -38.4907146 ])
+11.2422 	DATA 	Keypress: space
+11.2754 	EXP 	unnamed GratingStim: pos = array([-116.32333551,  -18.83707911])
+11.2754 	EXP 	stims: autoDraw = False
+11.2754 	EXP 	interval_stim: autoDraw = False
+11.2754 	EXP 	interval_stim: autoDraw = True
+11.3079 	EXP 	window1: mouseVisible = True
