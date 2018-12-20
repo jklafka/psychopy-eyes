@@ -1,0 +1,47 @@
+11.7640 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [2560, 1440]. Using actual size
+12.7003 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([0., 0., 0.]), colorSpace='rgb', fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x127716dd8>, gamma=None, kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x12b34a048>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([5120, 2880]), stereo=False, units='norm', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+12.7004 	EXP 	window1: recordFrameIntervals = False
+12.8666 	EXP 	window1: recordFrameIntervals = True
+13.0502 	EXP 	window1: recordFrameIntervals = False
+13.2607 	EXP 	Created instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='instructions', opacity=1.0, ori=0, pos=array([ 0. , -0.5]), rgb=array([0., 0., 0.]), text=str(...), units='norm', win=Window(...), wrapWidth=1)
+13.2673 	EXP 	Created stims = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='stims', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+13.3022 	EXP 	Created interval_stim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=-2.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineWidth=0.25, name='interval_stim', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.5, 0.5]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3062 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+13.3076 	EXP 	Created interval_stim2 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=-2.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineWidth=0.25, name='interval_stim2', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.5, 0.5]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3112 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_2', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+13.3126 	EXP 	Created interval_stim3 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=-2.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineWidth=0.25, name='interval_stim3', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.5, 0.5]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3353 	EXP 	instructions: autoDraw = True
+17.4213 	DATA 	Keypress: space
+17.4427 	EXP 	Imported stims.xlsx as conditions, 5 conditions, 4 params
+17.4570 	EXP 	Created sequence: sequential, trialTypes=5, nReps=1, seed=None
+17.4573 	EXP 	New trial (rep=0, index=0): OrderedDict([('trialNum', 1), ('trial1', 'The cat liked the milk. '), ('trial2', 'The dog liked the soup. '), ('question', 'Did the dog like the milk? ')])
+17.5512 	EXP 	instructions: autoDraw = False
+17.5512 	EXP 	stims: text = 'The cat liked the milk. '
+17.5512 	EXP 	stims: autoDraw = True
+17.5512 	EXP 	interval_stim: autoDraw = True
+19.4677 	EXP 	interval_stim: autoDraw = False
+23.4885 	DATA 	Keypress: space
+23.5198 	EXP 	stims: autoDraw = False
+23.5198 	EXP 	interval_stim: autoDraw = False
+23.5198 	EXP 	text: text = 'The dog liked the soup. '
+23.5198 	EXP 	text: autoDraw = True
+23.5198 	EXP 	interval_stim2: autoDraw = True
+25.5035 	EXP 	interval_stim2: autoDraw = False
+27.1062 	DATA 	Keypress: space
+27.1389 	EXP 	text: autoDraw = False
+27.1389 	EXP 	interval_stim2: autoDraw = False
+27.1389 	EXP 	text_2: text = 'Did the dog like the milk? '
+27.1389 	EXP 	text_2: autoDraw = True
+27.1389 	EXP 	interval_stim3: autoDraw = True
+29.1205 	EXP 	interval_stim3: autoDraw = False
+31.1400 	DATA 	Keypress: space
+32.4416 	DATA 	Keypress: f
+32.4493 	EXP 	New trial (rep=0, index=1): OrderedDict([('trialNum', 2), ('trial1', 'The child liked the cheese.'), ('trial2', 'The ocelot liked the ham. '), ('question', 'Did the orangutan like the cheese? ')])
+32.4731 	EXP 	text_2: autoDraw = False
+32.4731 	EXP 	interval_stim3: autoDraw = False
+32.4731 	EXP 	stims: text = 'The child liked the cheese.'
+32.4731 	EXP 	stims: autoDraw = True
+32.4731 	EXP 	interval_stim: autoDraw = True
+34.4559 	EXP 	interval_stim: autoDraw = False
+35.0144 	DATA 	Keypress: escape
+35.2866 	EXP 	window1: mouseVisible = True

@@ -1,0 +1,175 @@
+10.6718 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [2560, 1440]. Using actual size
+12.8813 	WARNING 	Couldn't measure a consistent frame rate.
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+12.8816 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([0., 0., 0.]), colorSpace='rgb', fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x127c9dd30>, gamma=None, kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x12af8a668>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([5120, 2880]), stereo=False, units='norm', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+12.8817 	EXP 	window1: recordFrameIntervals = False
+13.0474 	EXP 	window1: recordFrameIntervals = True
+13.0823 	WARNING 	t of last frame was 22.06ms (=1/45)
+13.1325 	WARNING 	t of last frame was 22.01ms (=1/45)
+13.1653 	WARNING 	t of last frame was 21.51ms (=1/46)
+13.2323 	WARNING 	t of last frame was 21.77ms (=1/45)
+13.2654 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+13.6785 	EXP 	window1: recordFrameIntervals = True
+13.8821 	EXP 	Created instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='instructions', opacity=1.0, ori=0, pos=array([0.  , 0.25]), rgb=array([0., 0., 0.]), text=str(...), units='norm', win=Window(...), wrapWidth=1)
+13.8905 	EXP 	Created stims = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='stims', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+13.9136 	EXP 	Created interval_stim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=-2.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineWidth=0.25, name='interval_stim', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.5, 0.5]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.9149 	EXP 	Created in_stim1 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=0.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineWidth=0.25, name='in_stim1', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.5, 0.5]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.9184 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+13.9197 	EXP 	Created interval_stim2 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=-2.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineWidth=0.25, name='interval_stim2', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.5, 0.5]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.9209 	EXP 	Created in_stim2 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=0.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineWidth=0.25, name='in_stim2', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.5, 0.5]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.9247 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_2', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+13.9259 	EXP 	Created interval_stim3 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=-2.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineWidth=0.25, name='interval_stim3', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.5, 0.5]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.9271 	EXP 	Created in_stim3 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=0.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineWidth=0.25, name='in_stim3', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.5, 0.5]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.9414 	EXP 	Created text_3 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_3', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='norm', win=Window(...), wrapWidth=1)
+13.9637 	EXP 	instructions: autoDraw = True
+19.2162 	DATA 	Keypress: space
+19.2597 	EXP 	Imported stims.xlsx as conditions, 5 conditions, 5 params
+19.2599 	EXP 	Created sequence: sequential, trialTypes=5, nReps=1, seed=None
+19.2602 	EXP 	New trial (rep=0, index=0): OrderedDict([('trialNum', 1), ('trial1', 'The cat liked the milk. '), ('trial2', 'The dog liked the soup. '), ('question', 'Did the dog like the milk? '), ('corrAns', 'j')])
+19.2799 	EXP 	instructions: autoDraw = False
+19.2799 	EXP 	stims: text = 'The cat liked the milk. '
+19.2799 	EXP 	stims: autoDraw = True
+19.2799 	EXP 	interval_stim: autoDraw = True
+19.2799 	EXP 	interval_stim: autoDraw = False
+20.6488 	DATA 	Keypress: space
+20.6799 	EXP 	stims: autoDraw = False
+20.6799 	EXP 	interval_stim: autoDraw = False
+20.6799 	EXP 	in_stim1: autoDraw = True
+22.6807 	EXP 	in_stim1: autoDraw = False
+22.6807 	EXP 	text: text = 'The dog liked the soup. '
+22.6807 	EXP 	text: autoDraw = True
+22.6807 	EXP 	interval_stim2: autoDraw = True
+22.6807 	EXP 	interval_stim2: autoDraw = False
+23.2816 	DATA 	Keypress: space
+23.2962 	EXP 	text: autoDraw = False
+23.2962 	EXP 	interval_stim2: autoDraw = False
+23.2962 	EXP 	in_stim2: autoDraw = True
+25.3175 	EXP 	in_stim2: autoDraw = False
+25.3175 	EXP 	text_2: text = 'Did the dog like the milk? '
+25.3175 	EXP 	text_2: autoDraw = True
+25.3175 	EXP 	interval_stim3: autoDraw = True
+25.3175 	EXP 	interval_stim3: autoDraw = False
+26.5218 	DATA 	Keypress: k
+28.4720 	DATA 	Keypress: j
+28.4841 	EXP 	text_2: autoDraw = False
+28.4841 	EXP 	interval_stim3: autoDraw = False
+28.4841 	EXP 	in_stim3: autoDraw = True
+30.4836 	EXP 	New trial (rep=0, index=1): OrderedDict([('trialNum', 2), ('trial1', 'The child liked the cheese.'), ('trial2', 'The ocelot liked the ham. '), ('question', 'Did the orangutan like the cheese? '), ('corrAns', 'j')])
+30.5006 	EXP 	in_stim3: autoDraw = False
+30.5006 	EXP 	stims: text = 'The child liked the cheese.'
+30.5006 	EXP 	stims: autoDraw = True
+30.5006 	EXP 	interval_stim: autoDraw = True
+30.5006 	EXP 	interval_stim: autoDraw = False
+31.8186 	DATA 	Keypress: space
+31.8334 	EXP 	stims: autoDraw = False
+31.8334 	EXP 	interval_stim: autoDraw = False
+31.8334 	EXP 	in_stim1: autoDraw = True
+33.8516 	EXP 	in_stim1: autoDraw = False
+33.8516 	EXP 	text: text = 'The ocelot liked the ham. '
+33.8516 	EXP 	text: autoDraw = True
+33.8516 	EXP 	interval_stim2: autoDraw = True
+33.8516 	EXP 	interval_stim2: autoDraw = False
+35.3699 	DATA 	Keypress: space
+35.3852 	EXP 	text: autoDraw = False
+35.3852 	EXP 	interval_stim2: autoDraw = False
+35.3852 	EXP 	in_stim2: autoDraw = True
+37.4190 	EXP 	in_stim2: autoDraw = False
+37.4190 	EXP 	text_2: text = 'Did the orangutan like the cheese? '
+37.4190 	EXP 	text_2: autoDraw = True
+37.4190 	EXP 	interval_stim3: autoDraw = True
+37.4190 	EXP 	interval_stim3: autoDraw = False
+39.5373 	DATA 	Keypress: j
+39.5533 	EXP 	text_2: autoDraw = False
+39.5533 	EXP 	interval_stim3: autoDraw = False
+39.5533 	EXP 	in_stim3: autoDraw = True
+41.5529 	EXP 	New trial (rep=0, index=2): OrderedDict([('trialNum', 3), ('trial1', 'The elephant liked the peanuts. '), ('trial2', 'The megalodon liked the fish. '), ('question', 'Did the elephant like the fish? '), ('corrAns', 'j')])
+41.5694 	EXP 	in_stim3: autoDraw = False
+41.5694 	EXP 	stims: text = 'The elephant liked the peanuts. '
+41.5694 	EXP 	stims: autoDraw = True
+41.5694 	EXP 	interval_stim: autoDraw = True
+41.5694 	EXP 	interval_stim: autoDraw = False
+42.2717 	DATA 	Keypress: space
+42.2870 	EXP 	stims: autoDraw = False
+42.2870 	EXP 	interval_stim: autoDraw = False
+42.2870 	EXP 	in_stim1: autoDraw = True
+44.3049 	EXP 	in_stim1: autoDraw = False
+44.3049 	EXP 	text: text = 'The megalodon liked the fish. '
+44.3049 	EXP 	text: autoDraw = True
+44.3049 	EXP 	interval_stim2: autoDraw = True
+44.3049 	EXP 	interval_stim2: autoDraw = False
+44.9223 	DATA 	Keypress: space
+44.9386 	EXP 	text: autoDraw = False
+44.9386 	EXP 	interval_stim2: autoDraw = False
+44.9386 	EXP 	in_stim2: autoDraw = True
+46.9549 	EXP 	in_stim2: autoDraw = False
+46.9549 	EXP 	text_2: text = 'Did the elephant like the fish? '
+46.9549 	EXP 	text_2: autoDraw = True
+46.9549 	EXP 	interval_stim3: autoDraw = True
+46.9549 	EXP 	interval_stim3: autoDraw = False
+47.2060 	DATA 	Keypress: j
+47.2213 	EXP 	text_2: autoDraw = False
+47.2213 	EXP 	interval_stim3: autoDraw = False
+47.2213 	EXP 	in_stim3: autoDraw = True
+49.2235 	EXP 	New trial (rep=0, index=3): OrderedDict([('trialNum', 4), ('trial1', 'The komodo dragon liked the meat. '), ('trial2', 'The mouse liked the lab room. '), ('question', 'Did the mouse like the lab room? '), ('corrAns', 'f')])
+49.2397 	EXP 	in_stim3: autoDraw = False
+49.2397 	EXP 	stims: text = 'The komodo dragon liked the meat. '
+49.2397 	EXP 	stims: autoDraw = True
+49.2397 	EXP 	interval_stim: autoDraw = True
+49.2397 	EXP 	interval_stim: autoDraw = False
+50.5074 	DATA 	Keypress: space
+50.5224 	EXP 	stims: autoDraw = False
+50.5224 	EXP 	interval_stim: autoDraw = False
+50.5224 	EXP 	in_stim1: autoDraw = True
+52.5397 	EXP 	in_stim1: autoDraw = False
+52.5397 	EXP 	text: text = 'The mouse liked the lab room. '
+52.5397 	EXP 	text: autoDraw = True
+52.5397 	EXP 	interval_stim2: autoDraw = True
+52.5397 	EXP 	interval_stim2: autoDraw = False
+53.7095 	DATA 	Keypress: space
+53.7246 	EXP 	text: autoDraw = False
+53.7246 	EXP 	interval_stim2: autoDraw = False
+53.7246 	EXP 	in_stim2: autoDraw = True
+55.7406 	EXP 	in_stim2: autoDraw = False
+55.7406 	EXP 	text_2: text = 'Did the mouse like the lab room? '
+55.7406 	EXP 	text_2: autoDraw = True
+55.7406 	EXP 	interval_stim3: autoDraw = True
+55.7406 	EXP 	interval_stim3: autoDraw = False
+56.2759 	DATA 	Keypress: f
+56.2907 	EXP 	text_2: autoDraw = False
+56.2907 	EXP 	interval_stim3: autoDraw = False
+56.2907 	EXP 	in_stim3: autoDraw = True
+58.2917 	EXP 	New trial (rep=0, index=4): OrderedDict([('trialNum', 5), ('trial1', 'The blue whale liked the algae. '), ('trial2', 'The echidna liked the bugs. '), ('question', 'Did the blue whale like the algae? '), ('corrAns', 'f')])
+58.3081 	EXP 	in_stim3: autoDraw = False
+58.3081 	EXP 	stims: text = 'The blue whale liked the algae. '
+58.3081 	EXP 	stims: autoDraw = True
+58.3081 	EXP 	interval_stim: autoDraw = True
+58.3081 	EXP 	interval_stim: autoDraw = False
+59.1446 	DATA 	Keypress: space
+59.1597 	EXP 	stims: autoDraw = False
+59.1597 	EXP 	interval_stim: autoDraw = False
+59.1597 	EXP 	in_stim1: autoDraw = True
+61.1764 	EXP 	in_stim1: autoDraw = False
+61.1764 	EXP 	text: text = 'The echidna liked the bugs. '
+61.1764 	EXP 	text: autoDraw = True
+61.1764 	EXP 	interval_stim2: autoDraw = True
+61.1764 	EXP 	interval_stim2: autoDraw = False
+61.4942 	DATA 	Keypress: space
+61.5093 	EXP 	text: autoDraw = False
+61.5093 	EXP 	interval_stim2: autoDraw = False
+61.5093 	EXP 	in_stim2: autoDraw = True
+63.5265 	EXP 	in_stim2: autoDraw = False
+63.5265 	EXP 	text_2: text = 'Did the blue whale like the algae? '
+63.5265 	EXP 	text_2: autoDraw = True
+63.5265 	EXP 	interval_stim3: autoDraw = True
+63.5265 	EXP 	interval_stim3: autoDraw = False
+63.9299 	DATA 	Keypress: j
+63.9447 	EXP 	text_2: autoDraw = False
+63.9447 	EXP 	interval_stim3: autoDraw = False
+63.9447 	EXP 	in_stim3: autoDraw = True
+65.9607 	EXP 	in_stim3: autoDraw = False
+65.9607 	EXP 	text_3: autoDraw = True
+68.0459 	DATA 	Keypress: space
+69.9814 	DATA 	Keypress: escape
+70.2539 	EXP 	window1: mouseVisible = True
