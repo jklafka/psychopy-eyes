@@ -1,6 +1,0 @@
-trialNum,trial1,trial2,question,trials.thisRepN,trials.thisTrialN,trials.thisN,trials.thisIndex,key_resp_5.keys,key_resp_5.rt,participant,session,date,expName,frameRate,
-1,The cat liked the milk. ,The dog liked the soup. ,Did the dog like the milk? ,0,0,0,0,f,6.387911673000417,test,001,2018_Nov_07_0959,10:25_test,60.17797890025674,
-2,The child liked the cheese.,The ocelot liked the ham. ,Did the orangutan like the cheese? ,0,1,1,1,j,2.253119603000414,test,001,2018_Nov_07_0959,10:25_test,60.17797890025674,
-3,The elephant liked the peanuts. ,The megalodon liked the fish. ,Did the elephant like the fish? ,0,2,2,2,j,2.0542274389999875,test,001,2018_Nov_07_0959,10:25_test,60.17797890025674,
-4,The komodo dragon liked the meat. ,The mouse liked the lab room. ,Did the mouse like the lab room? ,0,3,3,3,f,1.7016448730000775,test,001,2018_Nov_07_0959,10:25_test,60.17797890025674,
-5,The blue whale liked the algae. ,The echidna liked the bugs. ,Did the blue whale like the algae? ,0,4,4,4,f,1.7857747230000314,test,001,2018_Nov_07_0959,10:25_test,60.17797890025674,
