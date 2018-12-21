@@ -1,3 +1,3 @@
 # psychopy-eyes
 
-This is an eye-tracking experiment to measure the impact of positional entropy on first-pass gaze durations. 
+This is the current version of the eye-tracking experiment with Mandarin Chinese stimuli. 
