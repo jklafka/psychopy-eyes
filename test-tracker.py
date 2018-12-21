@@ -35,10 +35,12 @@ if dlg.OK == False:
     core.quit()  # user pressed cancel
 expInfo['date'] = data.getDateStr()  # add a simple timestamp
 expInfo['expName'] = expName
-full_data_arr = np.zeros((1, 5))
+
+import pandas as pd
+full_data = pd.DataFrame(columns=["subj", "item", "time", "x", "y"])
+full_data["item"] = full_data["item"].astype(str)
 
 from psychopy.iohub.client import launchHubServer
-#io = launchHubServer(iohub_config_name = "mouse.yaml", experiment_code = "test")
 io = launchHubServer(iohub_config_name = "callab.yaml")
 tracker = io.devices.tracker
 
@@ -74,15 +76,7 @@ else:
     
 gaze_dot = visual.GratingStim(win, tex=None, mask='gauss', pos=(0, 0),
                               size=(66, 66), color='green', units='pix')
-                              
-def insideObj(pos, obj, buff):
-
-    buff_pos = ([[buff, -buff], [-buff, -buff], [-buff, buff], [buff, buff]])
-    obj_vertices = obj.verticesPix + buff_pos
-
-    return psychopy.visual.helpers.pointInPolygon(pos[0], pos[1], poly=obj_vertices)                              
-                              
-                              
+                          
 
 # Initialize components for Routine "instr"
 instrClock = core.Clock()
@@ -260,13 +254,12 @@ for thisComponent in instrComponents:
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
-import csv
 
+import csv
 from collections import OrderedDict
 
 stims_list = []
-
-with open("stims_original.csv", encoding = "utf-8") as csvfile:
+with open("stimuli\mandarin_test_stims.csv", encoding = "utf-8") as csvfile:
    reader = csv.reader(csvfile)
    keys = next(reader)
    for row in reader:
@@ -299,11 +292,13 @@ for thisTrial in trials:
     io.clearEvents('all')
     tracker.setRecordingState(True)
     
-    data_arr = np.zeros((1000, 5))
+    data_df = pd.DataFrame(0.0, index=np.arange(1000), columns=["subj", "item", "time", "x", "y"])
+    data_df["item"] = data_df["item"].astype(str)
     da_counter = 0
     
     # update component parameters for each repeat
     stims.setText(trial1)
+    sentence = stims.text
     key_resp_2 = event.BuilderKeyResponse()
     # keep track of which components have finished
     trial1Components = [stims, key_resp_2, interval_stim]
@@ -325,11 +320,11 @@ for thisTrial in trials:
         if valid_gaze_pos:
             # If we have a gaze position from the tracker, update gc stim
             # and text stim.
-            data_arr[da_counter] = [expInfo['participant'], t, 1, gpos[0], gpos[1]]
+            data_df.iloc[da_counter] = [expInfo['participant'], sentence, t, gpos[0], gpos[1]]
             gaze_dot.setPos(gpos)
             gaze_dot.draw()
         else:
-            data_arr[da_counter] = [expInfo['participant'], t, 0, None, None]
+            data_df.iloc[da_counter] = [expInfo['participant'], sentence, t, None, None]
             
         da_counter += 1
 
@@ -389,8 +384,8 @@ for thisTrial in trials:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     tracker.setRecordingState(False)
-    full_data_arr = np.concatenate((full_data_arr, data_arr), axis=0)
-    np.savetxt("results.csv", full_data_arr, delimiter=",")
+    full_data = pd.concat([full_data, data_df])
+    full_data.to_csv("data.csv", index=False)
     # the Routine "trial1" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -667,10 +662,10 @@ for thisTrial in trials:
                 key_resp_5.keys = theseKeys[-1]  # just the last key pressed
                 key_resp_5.rt = key_resp_5.clock.getTime()
                 # was this 'correct'?
-#                if (key_resp_5.keys == str(corrAns)) or (key_resp_5.keys == corrAns):
-#                    key_resp_5.corr = 1
-#                else:
-#                    key_resp_5.corr = 0
+                if (key_resp_5.keys == str(corrAns)) or (key_resp_5.keys == corrAns):
+                    key_resp_5.corr = 1
+                else:
+                    key_resp_5.corr = 0
                 # a response ends the routine
                 continueRoutine = False
         
@@ -707,13 +702,13 @@ for thisTrial in trials:
             thisComponent.setAutoDraw(False)
     tracker.setRecordingState(False)
     # check responses
-#    if key_resp_5.keys in ['', [], None]:  # No response was made
-#        key_resp_5.keys=None
-#        # was no response the correct answer?!
-#        if str(corrAns).lower() == 'none':
-#           key_resp_5.corr = 1;  # correct non-response
-#        else:
-#           key_resp_5.corr = 0;  # failed to respond (incorrectly)
+    if key_resp_5.keys in ['', [], None]:  # No response was made
+        key_resp_5.keys=None
+        # was no response the correct answer?!
+        if str(corrAns).lower() == 'none':
+           key_resp_5.corr = 1;  # correct non-response
+        else:
+           key_resp_5.corr = 0;  # failed to respond (incorrectly)
     print(text_2.pos)
     print(text_2.boundingBox)
     print(len(text_2.text))
